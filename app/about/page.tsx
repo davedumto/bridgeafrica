@@ -112,7 +112,7 @@ export default function About() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             <AnimatedSection delay={0}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{
                   backgroundColor: '#F6BE00'
                 }}>
@@ -121,7 +121,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
                   No Voodoo Hiring
                 </h3>
-                <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
                   We become an extension of your team, we understand your needs
@@ -130,7 +130,7 @@ export default function About() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={100}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{
                   backgroundColor: '#F6BE00'
                 }}>
@@ -139,7 +139,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
                   Culture-First Vetting
                 </h3>
-                <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
                   We pre-vet every candidate for cultural fit, ensuring they
@@ -148,7 +148,7 @@ export default function About() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{
                   backgroundColor: '#F6BE00'
                 }}>
@@ -157,7 +157,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
                   Deep Understanding
                 </h3>
-                <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
                   We take time to understand your values, goals, and team
