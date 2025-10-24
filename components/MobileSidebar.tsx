@@ -13,7 +13,7 @@ export function MobileSidebar() {
   return (
     <>
       {/* Mobile Menu - Completely separate from Navigation */}
-      <div className={`md:hidden fixed top-[6em] right-0 h-[30vh] w-64 bg-white dark:bg-slate-900 shadow-xl transform transition-transform duration-300 ease-in-out rounded-l-2xl border-t-2 border-l-2 border-b-2 border-[#0A2342] dark:border-slate-500 ${
+      <div className={`md:hidden fixed top-[6em] right-0 w-64 bg-white dark:bg-slate-900 shadow-xl transform transition-transform duration-300 ease-in-out rounded-l-2xl border-t-2 border-l-2 border-b-2 border-[#0A2342] dark:border-slate-500 ${
         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
       } z-[70]`}>
         <div className="px-6 py-6 space-y-6">
