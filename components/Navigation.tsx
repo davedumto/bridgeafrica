@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { MenuIcon, XIcon, SunIcon, MoonIcon } from 'lucide-react';
 import { useDarkMode } from '@/contexts/DarkModeContext';
@@ -16,8 +17,15 @@ export function Navigation() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-[60] bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] py-4 md:py-6 flex justify-between items-center">
-        <Link href="/" className="text-xl md:text-2xl font-bold text-[#0A2342] dark:text-yellow-400 transition-colors">
-          BridgeAfrica
+        <Link href="/" className="transition-opacity duration-300 hover:opacity-80">
+          <Image
+            src={isDarkMode ? "/yellowlogo.svg" : "/bluelogo.svg"}
+            alt="BridgeAfrica"
+            width={160}
+            height={40}
+            className="h-8 md:h-10 w-auto"
+            priority
+          />
         </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8 lg:gap-12 items-center">

@@ -2,9 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { LinkedinIcon, TwitterIcon, FacebookIcon, MailIcon } from 'lucide-react';
+import { useDarkMode } from '@/contexts/DarkModeContext';
 export function Footer() {
   const [email, setEmail] = useState('');
+  const { isDarkMode } = useDarkMode();
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Subscribe:', email);
@@ -148,8 +151,14 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
             {/* Logo and Copyright */}
             <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-8 text-center sm:text-left">
-              <Link href="/" className="text-xl md:text-2xl font-bold text-[#0A2342] dark:text-white transition-colors">
-                BridgeAfrica
+              <Link href="/" className="transition-opacity duration-300 hover:opacity-80">
+                <Image
+                  src={isDarkMode ? "/yellowlogo.svg" : "/bluelogo.svg"}
+                  alt="BridgeAfrica"
+                  width={160}
+                  height={40}
+                  className="h-8 md:h-10 w-auto"
+                />
               </Link>
               <p className="text-xs md:text-sm text-[#0A2342] dark:text-gray-300 transition-colors">
                 © 2025 BridgeAfrica. All Rights Reserved
