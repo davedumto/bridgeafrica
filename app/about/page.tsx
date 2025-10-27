@@ -1,6 +1,7 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import { Button } from '@/components/Button';
 import { SectionDivider } from '@/components/SectionDivider';
@@ -8,6 +9,15 @@ import { Footer } from '@/components/Footer';
 import { TargetIcon, HeartIcon, TrophyIcon } from 'lucide-react';
 
 export default function About() {
+  const [scrollY, setScrollY] = useState(0);
+
+  // Handle scroll for geometric shapes animation
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -58,12 +68,24 @@ export default function About() {
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="relative">
-                <div className="w-full h-64 md:h-80 lg:h-96 rounded-3xl" style={{
+                <div className="w-full h-64 md:h-80 lg:h-96 rounded-3xl flex items-center justify-center relative" style={{
                   backgroundColor: '#F6BE00'
-                }} />
-                <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-48 h-48 md:w-64 md:h-64 rounded-full opacity-20" style={{
-                  backgroundColor: '#D0312D'
-                }} />
+                }}>
+                  <div 
+                    className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-48 h-48 md:w-64 md:h-64 rounded-full opacity-20 z-10 transition-transform duration-300 ease-out" 
+                    style={{
+                      backgroundColor: '#D0312D',
+                      transform: `translateX(${-scrollY * 0.1}px)`
+                    }} 
+                  />
+                  <Image
+                    src="/icon.svg"
+                    alt="BridgeAfrica Icon"
+                    width={300}
+                    height={300}
+                    className="w-[18em] h-[18em] md:w-[20em] md:h-[18em] lg:w-[20em] lg:h-[23em] xl:w-[26em] object-contain relative z-20"
+                  />
+                </div>
               </div>
             </AnimatedSection>
           </div>
