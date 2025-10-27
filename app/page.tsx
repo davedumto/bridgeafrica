@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
@@ -122,11 +123,11 @@ export default function Home() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <AnimatedSection delay={0}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
                   Battle-Tested Pipeline
                 </h3>
-                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
                   Our rigorous vetting process ensures only exceptional talent
@@ -136,11 +137,11 @@ export default function Home() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={100}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
                   Zero Headaches
                 </h3>
-                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
                   We handle all payroll, contracts, and administrative tasks.
@@ -149,11 +150,11 @@ export default function Home() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
                   7-Day Replacement Guarantee
                 </h3>
-                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
                   If a placement does not work out, we will find a replacement
@@ -162,11 +163,11 @@ export default function Home() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={300}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
                   Transparent Flat Pricing
                 </h3>
-                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
                   No hidden fees or surprises. Our pricing is straightforward
@@ -182,58 +183,89 @@ export default function Home() {
       <section className="py-16 md:py-24 lg:py-[120px] bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center text-[#0A2342] dark:text-white transition-colors">
-              Our Process
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-16 text-center text-[#0A2342] dark:text-white transition-colors">
+              How it works
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center mb-8 md:mb-16 leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
-              lineHeight: '1.7'
-            }}>
-              From first contact to team launch in 48-72 hours
-            </p>
           </AnimatedSection>
-          <div className="space-y-6 md:space-y-8">
+          
+          <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-stretch">
             {[{
-              step: '1',
-              title: 'Deep dive into goals',
-              desc: 'We learn about your company culture, needs, and vision to find the perfect match.'
+              number: '1',
+              title: 'Tell us what you need',
+              description: 'Share your requirements, team culture, and project details with us'
             }, {
-              step: '2',
-              title: 'Custom solution design',
-              desc: 'We create a tailored hiring plan that aligns with your specific requirements.'
+              number: '2', 
+              title: 'We find the perfect match',
+              description: 'Our team curates candidates from our vetted talent pool within 48-72 hours'
             }, {
-              step: '3',
-              title: 'Assemble dream team',
-              desc: 'We present you with a shortlist of pre-vetted top-tier candidates within 48-72 hours.'
-            }, {
-              step: '4',
-              title: 'Training program',
-              desc: 'We onboard your new team members with comprehensive training and integration support.'
-            }, {
-              step: '5',
-              title: 'Go live with check-ins',
-              desc: 'Your team starts working, and we provide ongoing support to ensure success.'
-            }].map((item, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
-                <div className="bg-white dark:bg-slate-700 rounded-2xl p-6 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row items-start gap-4 md:gap-8">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center flex-shrink-0 text-xl md:text-2xl font-bold text-white" style={{
-                    backgroundColor: '#D0312D'
-                  }}>
-                    {item.step}
-                  </div>
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-[#0A2342] dark:text-white transition-colors">
-                      {item.title}
+              number: '3',
+              title: 'Start building',
+              description: 'Your new team integrates seamlessly and starts contributing immediately'
+            }].map((step, index) => (
+              <React.Fragment key={index}>
+                <AnimatedSection delay={index * 200} className="flex-1">
+                  <div className="bg-white dark:bg-slate-700 rounded-xl p-6 border border-gray-200 dark:border-slate-600 transition-colors h-full flex flex-col">
+                    <div className="text-6xl md:text-7xl font-bold opacity-80 text-[#D0312D] dark:text-[#D0312D] mb-4">
+                      {step.number}
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
+                      {step.title}
                     </h3>
-                    <p className="text-sm md:text-base leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                    <p className="text-base leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                       lineHeight: '1.7'
                     }}>
-                      {item.desc}
+                      {step.description}
                     </p>
                   </div>
-                </div>
-              </AnimatedSection>
+                </AnimatedSection>
+                
+                {index < 2 && (
+                  <>
+                    {/* Desktop horizontal arrow */}
+                    <div className="hidden lg:flex items-center">
+                      <Image 
+                        src="/arrow%20right.svg" 
+                        alt="Next step" 
+                        width={80}
+                        height={48}
+                        className="w-[5em] h-[3em] animate-pulse"
+                        style={{ 
+                          filter: 'brightness(0) saturate(100%) invert(13%) sepia(69%) saturate(4154%) hue-rotate(347deg) brightness(92%) contrast(92%)',
+                          animation: 'arrow-pulse 2s ease-in-out infinite'
+                        }}
+                      />
+                    </div>
+                    
+                    {/* Mobile vertical arrow */}
+                    <div className="lg:hidden flex justify-center py-4">
+                      <Image 
+                        src="/arrow%20right.svg" 
+                        alt="Next step" 
+                        width={32}
+                        height={32}
+                        className="w-8 h-8 rotate-90"
+                        style={{ 
+                          filter: 'brightness(0) saturate(100%) invert(13%) sepia(69%) saturate(4154%) hue-rotate(347deg) brightness(92%) contrast(92%)',
+                          animation: 'arrow-pulse 2s ease-in-out infinite'
+                        }}
+                      />
+                    </div>
+                  </>
+                )}
+              </React.Fragment>
             ))}
           </div>
+
+          <AnimatedSection delay={600}>
+            <div className="mt-16 md:mt-24 text-center">
+              <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-700 rounded-full px-6 py-3 shadow-md">
+                <div className="w-2 h-2 bg-[#D0312D] rounded-full"></div>
+                <span className="text-sm font-medium text-[#0A2342] dark:text-gray-300">
+                  Average time to deployment: 48-72 hours
+                </span>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
       <SectionDivider color="#ffffff" flip />

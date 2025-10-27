@@ -207,7 +207,7 @@ export default function About() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
               <Button>Request shortlist</Button>
-              <Button variant="secondary">Book a call</Button>
+              <Button variant="secondary" className='border border-1 border-[#D0312D]'>Book a call</Button>
             </div>
           </AnimatedSection>
         </div>
