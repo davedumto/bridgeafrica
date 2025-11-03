@@ -25,14 +25,13 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] py-16 md:py-24 lg:py-[120px]">
           <AnimatedSection>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-[#0A2342] dark:text-white transition-colors">
-              Our Story
+              About Us
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl text-[#0A2342] dark:text-gray-300 transition-colors" style={{
               lineHeight: '1.7'
             }}>
-              BridgeAfrica was born from a simple observation: the world&apos;s most
-              innovative companies were missing out on exceptional talent simply
-              because they were looking in the same places.
+              We started as an experiment by an MBA at UC Berkeley Haas who was building in public,
+              sharing every win, setback, and lesson.
             </p>
           </AnimatedSection>
         </div>
@@ -43,27 +42,18 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#0A2342] dark:text-white transition-colors">
-                It Started at UC Berkeley
-              </h2>
-              <p className="mb-4 md:mb-6 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+              <p className="mb-4 md:mb-6 text-lg md:text-xl lg:text-2xl leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                 lineHeight: '1.7'
               }}>
-                During our MBA program, we discovered that founders were
-                struggling with the same challenge: finding quality talent that
-                could scale with their vision without breaking the bank.
+                The conversations that followed with founders revealed
+                a clear truth: visionary teams don't have time to sift endlessly for A-players. They need
+                exceptional software talent and operational firepower now.
               </p>
-              <p className="mb-4 md:mb-6 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+              <p className="mb-4 md:mb-6 text-lg md:text-xl lg:text-2xl leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                 lineHeight: '1.7'
               }}>
-                Our first virtual assistant placement was a revelation. The
-                talent was exceptional, the cultural fit was perfect, and the
-                cost savings were substantial.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
-                lineHeight: '1.7'
-              }}>
-                That success story became the foundation for BridgeAfrica.
+                So we went all in. We connect bold companies with top-tier African engineers and operations
+                talent who work like owners and scale with ambition.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
@@ -97,20 +87,14 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] text-center relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-[#0A2342] dark:text-white transition-colors">
-              Africa is Rising
+              Why Africa
             </h2>
-            <p className="text-2xl md:text-3xl mb-6 md:mb-8 leading-relaxed max-w-4xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
-              lineHeight: '1.7'
-            }}>
-              Diversify your bench here. We work hardest because we have
-              everything to prove.
-            </p>
             <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
               lineHeight: '1.7'
             }}>
-              Our mission is to connect visionary companies with top-tier
-              African talent, creating opportunities that transform businesses
-              and lives.
+              Africa is rising. The region is dense with skilled builders who are hungry, resilient, and ready to
+              compete globally. Diversifying your bench here is like a smart portfolio construction for talent:
+              high caliber, cost-effective, and committed.
             </p>
           </AnimatedSection>
         </div>
@@ -129,7 +113,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-16 text-center text-[#0A2342] dark:text-white transition-colors">
-              How We Work
+              Why Us
             </h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
@@ -141,13 +125,13 @@ export default function About() {
                   <TargetIcon size={32} color="#0A2342" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  No Voodoo Hiring
+                  Operator DNA
                 </h3>
                 <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  We become an extension of your team, we understand your needs
-                  deeply before making any recommendations.
+                  We move like an extension of your internal team: fast, transparent,
+                  and accountable.
                 </p>
               </div>
             </AnimatedSection>
@@ -159,13 +143,12 @@ export default function About() {
                   <HeartIcon size={32} color="#0A2342" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  Culture-First Vetting
+                  No voodoo hiring
                 </h3>
                 <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  We pre-vet every candidate for cultural fit, ensuring they
-                  align with your company values and vision.
+                  Rigorous pre-vetting for skill, speed, and cultural fit.
                 </p>
               </div>
             </AnimatedSection>
@@ -177,13 +160,13 @@ export default function About() {
                   <TrophyIcon size={32} color="#0A2342" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  Deep Understanding
+                  Context first
                 </h3>
                 <p className="text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  We take time to understand your values, goals, and team
-                  dynamics before presenting candidates.
+                  We learn your pace, values, and roadmap, then curate matches that feel
+                  custom-built.
                 </p>
               </div>
             </AnimatedSection>
@@ -197,18 +180,24 @@ export default function About() {
           <AnimatedSection>
             <div className="bg-gray-50 dark:bg-slate-700 rounded-3xl p-8 md:p-12 lg:p-16 text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-[#0A2342] dark:text-white transition-colors">
-                Not for Everyone — By Design
+                Our Promise
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                 lineHeight: '1.7'
               }}>
-                We work with forward-thinking companies ready to experiment and
-                embrace new ways of building teams.
+                We are the hardest workers in the room because we have everything to prove. If a match isn't
+                perfect, we pivot (no ego, no excuses) until it is.
+              </p>
+              <p className="text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
+                lineHeight: '1.7'
+              }}>
+                We've codified how to deliver A+ players from
+                Africa, and we stake our reputation on your outcomes.
               </p>
               <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                 lineHeight: '1.7'
               }}>
-                Our commitment is relentless. We bring no egos, just results.
+                At our core, we're builders too. Join us if you're ready to redefine what's possible.
               </p>
             </div>
           </AnimatedSection>
