@@ -177,7 +177,7 @@ export default function Home() {
                   lineHeight: '1.7'
                 }}>
                   Our very first placement—a VA for a legal practitioner—became
-                  a growth unlock. We've been igniting wins ever since.
+                  a growth unlock. We`ve been igniting wins ever since.
                 </p>
               </div>
             </AnimatedSection>

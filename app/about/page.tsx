@@ -46,7 +46,7 @@ export default function About() {
                 lineHeight: '1.7'
               }}>
                 The conversations that followed with founders revealed
-                a clear truth: visionary teams don't have time to sift endlessly for A-players. They need
+                a clear truth: visionary teams don`t have time to sift endlessly for A-players. They need
                 exceptional software talent and operational firepower now.
               </p>
               <p className="mb-4 md:mb-6 text-lg md:text-xl lg:text-2xl leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
@@ -185,19 +185,19 @@ export default function About() {
               <p className="text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                 lineHeight: '1.7'
               }}>
-                We are the hardest workers in the room because we have everything to prove. If a match isn't
+                We are the hardest workers in the room because we have everything to prove. If a match isn`t
                 perfect, we pivot (no ego, no excuses) until it is.
               </p>
               <p className="text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                 lineHeight: '1.7'
               }}>
-                We've codified how to deliver A+ players from
+                We`ve codified how to deliver A+ players from
                 Africa, and we stake our reputation on your outcomes.
               </p>
               <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                 lineHeight: '1.7'
               }}>
-                At our core, we're builders too. Join us if you're ready to redefine what's possible.
+                At our core, we`re builders too. Join us if you`re ready to redefine what`s possible.
               </p>
             </div>
           </AnimatedSection>

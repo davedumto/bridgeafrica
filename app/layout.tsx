@@ -4,6 +4,7 @@ import { DarkModeProvider } from '@/contexts/DarkModeContext'
 import { MenuProvider } from '@/contexts/MenuContext'
 import { MobileSidebar } from '@/components/MobileSidebar'
 import { BlurWrapper } from '@/components/BlurWrapper'
+import { Toaster } from 'sonner'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -26,6 +27,19 @@ export default function RootLayout({
             <BlurWrapper>
               {children}
             </BlurWrapper>
+            <Toaster 
+              position="bottom-right"
+              toastOptions={{
+                style: {
+                  background: '#ffffff',
+                  color: '#0A2342',
+                  border: '1px solid #e2e8f0',
+                },
+                className: 'sonner-toast',
+              }}
+              theme="light"
+              richColors
+            />
           </MenuProvider>
         </DarkModeProvider>
       </body>
