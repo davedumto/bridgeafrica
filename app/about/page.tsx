@@ -8,6 +8,7 @@ import { SectionDivider } from '@/components/SectionDivider';
 import { Footer } from '@/components/Footer';
 import { TargetIcon, HeartIcon, TrophyIcon } from 'lucide-react';
 
+
 export default function About() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -46,7 +47,7 @@ export default function About() {
                 lineHeight: '1.7'
               }}>
                 The conversations that followed with founders revealed
-                a clear truth: visionary teams don`t have time to sift endlessly for A-players. They need
+                a clear truth: visionary teams do not have time to sift endlessly for A-players. They need
                 exceptional software talent and operational firepower now.
               </p>
               <p className="mb-4 md:mb-6 text-lg md:text-xl lg:text-2xl leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
@@ -70,7 +71,7 @@ export default function About() {
                   />
                   <Image
                     src="/icon.svg"
-                    alt="BridgeAfrica Icon"
+                    alt="BridgeAfrica company icon representing our mission to connect global companies with top African talent"
                     width={300}
                     height={300}
                     className="w-[18em] h-[18em] md:w-[20em] md:h-[18em] lg:w-[20em] lg:h-[23em] xl:w-[26em] object-contain relative z-20"

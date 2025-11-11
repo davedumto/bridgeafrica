@@ -231,7 +231,7 @@ export default function Home() {
                     <div className="hidden lg:flex items-center">
                       <Image 
                         src="/arrow%20right.svg" 
-                        alt="Next step" 
+                        alt="Process flow arrow pointing to next step in BridgeAfrica's 72-hour talent placement process" 
                         width={80}
                         height={48}
                         className="w-[5em] h-[3em] animate-pulse"
@@ -246,7 +246,7 @@ export default function Home() {
                     <div className="lg:hidden flex justify-center py-4">
                       <Image 
                         src="/arrow%20right.svg" 
-                        alt="Next step" 
+                        alt="Process flow arrow pointing to next step in BridgeAfrica's 72-hour talent placement process" 
                         width={32}
                         height={32}
                         className="w-8 h-8 rotate-90"

@@ -7,6 +7,7 @@ import { SectionDivider } from '@/components/SectionDivider';
 import { Footer } from '@/components/Footer';
 import { CalendarIcon, FileTextIcon, ListIcon } from 'lucide-react';
 
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',

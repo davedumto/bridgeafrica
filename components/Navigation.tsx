@@ -20,7 +20,7 @@ export function Navigation() {
         <Link href="/" className="transition-opacity duration-300 hover:opacity-80">
           <Image
             src={isDarkMode ? "/yellowlogo.svg" : "/bluelogo.svg"}
-            alt="BridgeAfrica"
+            alt="BridgeAfrica - Connecting companies with Africa's top talent"
             width={160}
             height={40}
             className="h-8 md:h-10 w-auto"
