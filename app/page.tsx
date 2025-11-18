@@ -7,7 +7,7 @@ import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { SectionDivider } from '@/components/SectionDivider';
 import { Footer } from '@/components/Footer';
-import { CheckCircleIcon, ShieldCheckIcon, ClockIcon, DollarSignIcon, UsersIcon } from 'lucide-react';
+import { DatabaseIcon, MapIcon, NetworkIcon } from 'lucide-react';
 
 export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -15,14 +15,14 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   
   const testimonials = [{
-    quote: 'BridgeAfrica transformed our hiring process. We found exceptional talent that seamlessly integrated with our team culture.',
-    company: 'TechCorp Inc.'
+    quote: 'For anyone serious about understanding Africa\'s infrastructure, BridgeAfrica is essential.',
+    company: 'Infrastructure investor'
   }, {
-    quote: 'The quality of candidates and the speed of delivery exceeded all our expectations. Truly a game-changer for our operations.',
-    company: 'Global Solutions Ltd.'
+    quote: 'The most reliable source for African infrastructure data and analysis.',
+    company: 'Development finance professional'
   }, {
-    quote: 'Working with BridgeAfrica has been one of the best decisions we have made. Their team understands our needs perfectly.',
-    company: 'Innovation Partners'
+    quote: 'Essential platform for tracking Africa\'s transformative projects and understanding the networks building the continent.',
+    company: 'Infrastructure analyst'
   }];
   
   // Handle scroll for geometric shapes animation
@@ -61,21 +61,23 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] py-16 md:py-24 lg:py-[120px] relative z-10">
           <AnimatedSection>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight text-[#0A2342] dark:text-white transition-colors">
-              Diversify your team with
+              We tell the story of
               <br />
-              Africa&apos;s top 1% talent.
+              Africa&apos;s infrastructure.
             </h1>
             <p className="text-base md:text-lg lg:text-xl mb-4 leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
               lineHeight: '1.7'
             }}>
-              Software & Admin — we place the best. No one comes close.
+              From design and conceptualization to financing, timelines, and the defining moments in between, we document the projects reshaping Africa and the networks around them.
             </p>
             <p className="text-sm md:text-base mb-8 md:mb-12 leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors opacity-80" style={{
               lineHeight: '1.7'
             }}>
-              Managed service, flat monthly pricing, Fill in 72 hrs
+              We believe Africa will lead, and that its roads, grids, ports, rails, data centers, and cities must be built.
+              <br />
+              BridgeAfrica is where that story is told.
             </p>
-            <Button>Book a Call</Button>
+            <Button>Explore Projects</Button>
           </AnimatedSection>
         </div>
         {/* Animated Geometric Shapes */}
@@ -106,13 +108,13 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             <AnimatedSection delay={0} className="flex">
-              <Card icon={<CheckCircleIcon size={32} color="#0A2342" />} title="Quality: Best Software and Admin Talent" description="Quality, without compromise. We surface the top 1% software engineers, operators, and creatives—pre‑vetted for skill, speed, and communication." delay={0} />
+              <Card icon={<DatabaseIcon size={32} color="#0A2342" />} title="Document the projects" description="The Grand Ethiopian Renaissance Dam. The Standard Gauge Railway. Lekki Port. The Trans-African Highway network. We track every major infrastructure project reshaping Africa from first concept to ribbon cutting." delay={0} />
             </AnimatedSection>
             <AnimatedSection delay={100} className="flex">
-              <Card icon={<UsersIcon size={32} color="#0A2342" />} title="Diversify your outsourcing Option" description="Resilience by design. Build a second home base in Africa to de‑risk geography and unlock round‑the‑clock velocity." delay={100} />
+              <Card icon={<NetworkIcon size={32} color="#0A2342" />} title="Follow the money" description="Infrastructure is financed, procured, and delivered through complex networks. We map who builds, who funds, and how deals get done across the continent." delay={100} />
             </AnimatedSection>
             <AnimatedSection delay={200} className="flex">
-              <Card icon={<ShieldCheckIcon size={32} color="#0A2342" />} title="Trust: Managed service so you can win" description="Managed for outcomes. We handle payroll, contracts, compliance, devices/security, and ongoing performance. You focus on product and growth." delay={200} />
+              <Card icon={<MapIcon size={32} color="#0A2342" />} title="Tell the story" description="Beyond steel and concrete are the decisions, delays, breakthroughs, and people that determine whether infrastructure gets built. We document it all." delay={200} />
             </AnimatedSection>
           </div>
         </div>
@@ -123,61 +125,58 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-[#0A2342] dark:text-white transition-colors">
-              When you choose Africa—choose the best
+              For Nigeria, For Africa
             </h2>
             <p className="text-lg md:text-xl mb-8 md:mb-16 text-center text-[#0A2342] dark:text-gray-300 transition-colors">
-              BridgeAfrica is the best outsourcing shop for African talent, full stop.
+              BridgeAfrica is the essential platform for understanding Africa's infrastructure story with deep expertise in the Nigerian market.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <AnimatedSection delay={0}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  Operator DNA
+                  Unmatched Project Intelligence
                 </h3>
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  We move like an extension of your internal team—fast, transparent,
-                  accountable.
+                  Real-time tracking of major infrastructure projects across transportation, energy, telecommunications, and urban development. No project database comes close to our depth and accuracy.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={100}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  No voodoo hiring
+                  Market-Leading Analysis
                 </h3>
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  Rigorous pre-vetting for skill, speed, and cultural fit.
+                  We don&apos;t just report what&apos;s being built. We explain the financing models, regulatory frameworks, procurement processes, and geopolitical dynamics shaping Africa&apos;s infrastructure landscape.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  Context first
+                  Documenting History
                 </h3>
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  We learn your pace, values, and roadmap, then curate matches that feel
-                  custom-built.
+                  These projects deserve to be documented, understood, and remembered. BridgeAfrica is that record.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  From day one impact
+                  Africa&apos;s Future
                 </h3>
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  Our very first placement—a VA for a legal practitioner—became
-                  a growth unlock. We`ve been igniting wins ever since.
+                  From the Grand Ethiopian Renaissance Dam to the Standard Gauge Railway, from Dangote Refinery to the Trans-African Highway network. Africa is building the infrastructure that will power the next century.
                 </p>
               </div>
             </AnimatedSection>
@@ -190,23 +189,23 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-16 text-center text-[#0A2342] dark:text-white transition-colors">
-              Our 72‑Hour Flow
+              How We Work
             </h2>
           </AnimatedSection>
           
           <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-stretch">
             {[{
               number: '1',
-              title: 'Precision Intake',
-              description: 'Deep‑dive on role outcomes, sprints, comms cadence, time zones, tool stack, and culture markers. Define acceptance criteria and 30‑60‑90 day milestones.'
+              title: 'Research',
+              description: 'On-ground reporting, government documents, contractor records, stakeholder interviews. Every data point verified and sourced.'
             }, {
               number: '2', 
-              title: 'Curate & Calibrate',
-              description: 'Source from always‑warm pipeline; skills & comms re‑verification. Send 3–5 shortlists with reference summaries. You give rapid feedback.'
+              title: 'Map the networks',
+              description: 'Track financing, identify stakeholders, document relationships. Understand not just *what* is being built, but *who* is building it and *how*.'
             }, {
               number: '3',
-              title: 'Working Session & Offer',
-              description: 'Live technical or work‑sample session. Final mutual fit check (culture & pace). Offer + managed onboarding.'
+              title: 'Keep it current',
+              description: 'Infrastructure projects evolve. We update progress, timelines, costs, and milestones as they happen.'
             }].map((step, index) => (
               <React.Fragment key={index}>
                 <AnimatedSection delay={index * 200} className="flex-1">
@@ -267,7 +266,7 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-700 rounded-full px-6 py-3 shadow-md">
                 <div className="w-2 h-2 bg-[#D0312D] rounded-full"></div>
                 <span className="text-sm font-medium text-[#0A2342] dark:text-gray-300">
-                  Fill in 72 hours
+                  Real-time infrastructure intelligence
                 </span>
               </div>
             </div>
@@ -280,7 +279,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-center text-[#0A2342] dark:text-white transition-colors">
-              Hear what our clients have to say
+              Essential Infrastructure Intelligence
             </h2>
           </AnimatedSection>
           <AnimatedSection>
@@ -296,7 +295,7 @@ export default function Home() {
                 <p className="text-lg md:text-xl font-bold" style={{
                   color: '#D0312D'
                 }}>
-                  — {testimonials[currentTestimonial].company}
+                  {testimonials[currentTestimonial].company}
                 </p>
               </div>
               <div className="flex justify-center gap-3 mt-8 md:mt-12">
@@ -320,18 +319,16 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] text-center relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-white">
-              Ready to diversify smart?
+              Get Started
             </h2>
             <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-12 text-white leading-relaxed" style={{
               lineHeight: '1.7'
             }}>
-              Join forward-thinking companies building resilient teams with
-              Africa&apos;s best talent
+              Explore the projects reshaping Africa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-              <Button>Book 15 min call</Button>
-              <Button variant="secondary" className='border-1 border border-[#D0321D]'>See sample profiles</Button>
-              <Button>Request shortlist</Button>
+              <Button>Explore Projects</Button>
+              <Button variant="secondary" className='border-1 border border-[#D0321D]'>Contact Us</Button>
             </div>
           </AnimatedSection>
         </div>

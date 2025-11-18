@@ -22,11 +22,6 @@ export function MobileSidebar() {
           }`}>
             Home
           </Link>
-          <Link href="/about" onClick={() => setIsMenuOpen(false)} className={`block text-lg font-medium transition-colors py-3 ${
-            isActive('/about') ? 'text-[#F6BE00] dark:text-yellow-400' : 'text-[#0A2342] dark:text-gray-200'
-          }`}>
-            About Us
-          </Link>
           <Link href="/contact" onClick={() => setIsMenuOpen(false)} className={`block text-lg font-medium transition-colors py-3 ${
             isActive('/contact') ? 'text-[#F6BE00] dark:text-yellow-400' : 'text-[#0A2342] dark:text-gray-200'
           }`}>

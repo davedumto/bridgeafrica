@@ -35,12 +35,12 @@ export default function Contact() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] py-16 md:py-24 lg:py-[120px] text-center">
           <AnimatedSection>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-[#0A2342] dark:text-white transition-colors">
-              Ready to Diversify Smart?
+              Get Started
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
               lineHeight: '1.7'
             }}>
-              Choose how you would like to get started with BridgeAfrica
+              Choose how you would like to engage with BridgeAfrica
             </p>
           </AnimatedSection>
         </div>
@@ -60,13 +60,12 @@ export default function Contact() {
                 <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
                   color: '#0A2342'
                 }}>
-                  Book 15-Min Call
+                  Book 30-Min Call
                 </h3>
                 <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                   lineHeight: '1.7'
                 }}>
-                  Quick conversation to discuss your needs and see if we are a
-                  good fit.
+                  Schedule a conversation to discuss your infrastructure intelligence needs and explore how we can help.
                 </p>
                 <Button>Schedule Call</Button>
               </div>
@@ -81,15 +80,14 @@ export default function Contact() {
                 <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
                   color: '#0A2342'
                 }}>
-                  See Sample Profiles
+                  Explore Sample Projects
                 </h3>
                 <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                   lineHeight: '1.7'
                 }}>
-                  Browse examples of the exceptional talent we place with our
-                  clients.
+                  Browse examples of the major infrastructure projects we track and analyze across Africa.
                 </p>
-                <Button>View Profiles</Button>
+                <Button>View Projects</Button>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
@@ -102,15 +100,14 @@ export default function Contact() {
                 <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
                   color: '#0A2342'
                 }}>
-                  Request Shortlist
+                  Request Demo
                 </h3>
                 <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                   lineHeight: '1.7'
                 }}>
-                  Get a custom shortlist of pre-vetted candidates within 48-72
-                  hours.
+                  Get a personalized demo of our infrastructure tracking platform and see how it can serve your needs.
                 </p>
-                <Button>Get Shortlist</Button>
+                <Button>Request Demo</Button>
               </div>
             </AnimatedSection>
           </div>
@@ -209,7 +206,7 @@ export default function Contact() {
             <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed max-w-3xl mx-auto" style={{
               lineHeight: '1.7'
             }}>
-              Connecting visionary companies with Africa&apos;s top 1% talent
+              Documenting Africa&apos;s infrastructure journey
             </p>
           </AnimatedSection>
         </div>

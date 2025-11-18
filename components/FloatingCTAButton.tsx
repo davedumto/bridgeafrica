@@ -8,8 +8,7 @@ export function FloatingCTAButton() {
 
   // Handle opening Calendly link
   const handleScheduleCall = () => {
-    // Replace with your actual Calendly link
-    window.open('https://calendly.com/bridgeafrica/15min-call', '_blank');
+    window.open('https://calendly.com/bridgeafrica98/30min', '_blank');
   };
 
   return (

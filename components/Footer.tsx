@@ -178,13 +178,13 @@ export function Footer() {
             </h4>
             <ul className="space-y-1 md:space-y-3">
               <li>
-                <Link href="/about" className="text-sm md:text-base transition-colors hover:underline text-[#0A2342] dark:text-gray-300">
-                  About Us
-                </Link>
+                <a href="#" className="text-sm md:text-base transition-colors hover:underline text-[#0A2342] dark:text-gray-300">
+                  Projects
+                </a>
               </li>
               <li>
                 <a href="#" className="text-sm md:text-base transition-colors hover:underline text-[#0A2342] dark:text-gray-300">
-                  Careers
+                  Analysis
                 </a>
               </li>
               <li>
@@ -194,7 +194,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="text-sm md:text-base transition-colors hover:underline text-[#0A2342] dark:text-gray-300">
-                  Blog
+                  Reports
                 </a>
               </li>
             </ul>

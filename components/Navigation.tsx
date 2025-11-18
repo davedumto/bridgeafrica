@@ -34,11 +34,6 @@ export function Navigation() {
           }`}>
             Home
           </Link>
-          <Link href="/about" className={`text-base font-medium transition-colors ${
-            isActive('/about') ? 'text-[#D0312D] dark:text-yellow-400' : 'text-[#0A2342] dark:text-gray-200'
-          }`}>
-            About Us
-          </Link>
           <Link href="/contact" className={`text-base font-medium transition-colors ${
             isActive('/contact') ? 'text-[#D0312D] dark:text-yellow-400' : 'text-[#0A2342] dark:text-gray-200'
           }`}>
