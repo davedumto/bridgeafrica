@@ -7,6 +7,7 @@ import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { SectionDivider } from '@/components/SectionDivider';
 import { Footer } from '@/components/Footer';
+import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { DatabaseIcon, MapIcon, NetworkIcon } from 'lucide-react';
 
 export default function Home() {
@@ -102,6 +103,30 @@ export default function Home() {
           />
         </div>
       </section>
+      
+      {/* YouTube Video Section */}
+      <section className="py-16 md:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div className="max-w-[1000px] mx-auto px-6 md:px-12 lg:px-[100px]">
+          <AnimatedSection>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
+                See Africa&apos;s Infrastructure Story
+              </h2>
+              <p className="text-base md:text-lg text-[#0A2342] dark:text-gray-300 transition-colors max-w-2xl mx-auto" style={{
+                lineHeight: '1.7'
+              }}>
+                Watch how we document and analyze the projects that are reshaping the continent.
+              </p>
+            </div>
+            <YouTubeEmbed 
+              videoId="dQw4w9WgXcQ"
+              title="BridgeAfrica: Documenting Africa's Infrastructure Journey"
+              className="max-w-4xl mx-auto"
+            />
+          </AnimatedSection>
+        </div>
+      </section>
+      
       <SectionDivider color="#f9fafb" />
       {/* Value Props Section */}
       <section className="py-16 md:py-24 lg:py-[120px] bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
