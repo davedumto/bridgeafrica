@@ -16,7 +16,7 @@ export function Navigation() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-[60] bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] py-4 md:py-6 flex justify-between items-center">
+      <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px] py-4 md:py-6 flex justify-between items-center">
         <Link href="/" className="transition-opacity duration-300 hover:opacity-80">
           <Image
             src={isDarkMode ? "/yellowlogo.svg" : "/bluelogo.svg"}

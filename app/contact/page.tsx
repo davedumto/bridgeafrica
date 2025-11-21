@@ -32,7 +32,7 @@ export default function Contact() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="min-h-[50vh] flex items-center justify-center pt-20 md:pt-24 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] py-16 md:py-24 lg:py-[120px] text-center">
+        <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px] py-16 md:py-24 lg:py-[120px] text-center">
           <AnimatedSection>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-[#0A2342] dark:text-white transition-colors">
               Get Started
@@ -40,7 +40,7 @@ export default function Contact() {
             <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
               lineHeight: '1.7'
             }}>
-              Choose how you would like to engage with BridgeAfrica
+              Choose how you would like to engage with our infrastructure intelligence platform
             </p>
           </AnimatedSection>
         </div>
@@ -48,7 +48,7 @@ export default function Contact() {
       <SectionDivider color="#f9fafb" />
       {/* Three Options Section */}
       <section className="py-16 md:py-24 lg:py-[120px] bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px]">
+        <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             <AnimatedSection delay={0}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
@@ -60,14 +60,14 @@ export default function Contact() {
                 <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
                   color: '#0A2342'
                 }}>
-                  Book 30-Min Call
+                  Schedule a Call
                 </h3>
                 <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                   lineHeight: '1.7'
                 }}>
-                  Schedule a conversation to discuss your infrastructure intelligence needs and explore how we can help.
+                  Book a call to discuss your infrastructure intelligence needs and explore how our platform can serve you.
                 </p>
-                <Button>Schedule Call</Button>
+                <Button onClick={() => window.open('https://calendly.com/bridgeafrica98/30min', '_blank')}>Schedule Call</Button>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={100}>
@@ -80,14 +80,14 @@ export default function Contact() {
                 <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
                   color: '#0A2342'
                 }}>
-                  Explore Sample Projects
+                  Watch Project Stories
                 </h3>
                 <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                   lineHeight: '1.7'
                 }}>
-                  Browse examples of the major infrastructure projects we track and analyze across Africa.
+                  Explore our YouTube channel featuring in-depth stories and analysis of major African infrastructure projects.
                 </p>
-                <Button>View Projects</Button>
+                <Button onClick={() => window.open('https://www.youtube.com/@bridgeafrica', '_blank')}>Watch Stories</Button>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
@@ -100,14 +100,14 @@ export default function Contact() {
                 <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
                   color: '#0A2342'
                 }}>
-                  Request Demo
+                  Email Us
                 </h3>
                 <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
                   lineHeight: '1.7'
                 }}>
-                  Get a personalized demo of our infrastructure tracking platform and see how it can serve your needs.
+                  Send us your questions, partnership inquiries, or feedback directly via email.
                 </p>
-                <Button>Request Demo</Button>
+                <Button onClick={() => window.location.href = 'mailto:hello@bridgeafrica.com'}>Email Us</Button>
               </div>
             </AnimatedSection>
           </div>
@@ -116,7 +116,7 @@ export default function Contact() {
       <SectionDivider color="#ffffff" flip />
       {/* Contact Form Section */}
       <section className="py-16 md:py-24 lg:py-[120px] bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div className="max-w-[800px] mx-auto px-6 md:px-12 lg:px-[100px]">
+        <div className="max-w-[1000px] xl:max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
           <AnimatedSection>
             <div className="bg-gray-50 dark:bg-slate-700 rounded-3xl p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center text-[#0A2342] dark:text-white transition-colors">
@@ -198,7 +198,7 @@ export default function Contact() {
       </section>
       {/* Trust Signal Section */}
       <section className="py-16 md:py-24 lg:py-[120px] relative overflow-hidden bg-[#0A2342] dark:bg-slate-800">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[100px] text-center relative z-10">
+        <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px] text-center relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
               BridgeAfrica
