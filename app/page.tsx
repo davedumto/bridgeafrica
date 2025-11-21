@@ -145,7 +145,7 @@ export default function Home() {
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  Become the most trusted source for accurate, nuanced, and accessible insight on Africa's infrastructure transformation.
+                  Become the most trusted source for accurate, nuanced, and accessible insight on Africa`s infrastructure transformation.
                 </p>
               </div>
             </AnimatedSection>
