@@ -99,7 +99,7 @@ export default function Home() {
               </p>
             </div>
             <YouTubeEmbed 
-              videoId="dQw4w9WgXcQ"
+              videoId="ODNXdRY84Ug"
               title="BridgeAfrica: Documenting Africa's Infrastructure Journey"
               className="max-w-4xl mx-auto"
             />
@@ -133,43 +133,55 @@ export default function Home() {
               See. Remember. Understand. Connect.
             </h2>
             <p className="text-lg md:text-xl mb-8 md:mb-16 text-center text-[#0A2342] dark:text-gray-300 transition-colors">
-              Africa is transforming—but its infrastructure story risks being fragmented, forgotten, or misunderstood. That is why we exist. BridgeAfrica is the definitive record.
+              Africa is transforming—but its infrastructure story risks being fragmented, forgotten, or misunderstood. That is why we exist to for:
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <AnimatedSection delay={0}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  Shape Understanding
+                  Visibility
                 </h3>
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  Become the most trusted source for accurate, nuanced, and accessible insight on Africa`s infrastructure transformation.
+                  To surface the most important infrastructure projects—past, present, and planned—across sectors like transport, energy, housing, and telecoms. From obscure government tenders to megaprojects, we track what&apos;s being built and where.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={100}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  Inspire Accountability
+                  Memory
                 </h3>
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  Empower citizens, media, and policymakers with the clarity they need to track promises, follow the money, and demand progress.
+                  Africa&apos;s infrastructure era deserves to be remembered. BridgeAfrica creates a searchable record of milestones, policies, and outcomes—so we don&apos;t repeat mistakes and we build on what works.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
-                  Build Connection
+                  Insight
                 </h3>
                 <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
                   lineHeight: '1.7'
                 }}>
-                  Create a shared space where builders, thinkers, and communities can engage meaningfully around the future being constructed across the continent.
+                  We go beyond tracking to explain. From financing and policy to procurement and politics, we unpack the systems shaping Africa&apos;s development so decisions are informed, not improvised.
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-10 hover:shadow-xl transition-all duration-300 border-2 border-[#0A2342] dark:border-slate-500 h-full flex flex-col">
+                <h3 className="text-2xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
+                  Engagement
+                </h3>
+                <p className="leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors flex-grow" style={{
+                  lineHeight: '1.7'
+                }}>
+                  This isn&apos;t just a database—it&apos;s a civic tool. BridgeAfrica fosters dialogue between builders, analysts, journalists, and the public to create more transparent, accountable, and inclusive infrastructure outcomes.
                 </p>
               </div>
             </AnimatedSection>
@@ -177,28 +189,28 @@ export default function Home() {
         </div>
       </section>
       <SectionDivider color="#f9fafb" />
-      {/* Process Section */}
+      {/* Our Aspiration Section */}
       <section className="py-16 md:py-24 lg:py-[120px] bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
         <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-16 text-center text-[#0A2342] dark:text-white transition-colors">
-              How We Work
+              Our Aspiration
             </h2>
           </AnimatedSection>
           
           <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-stretch">
             {[{
               number: '1',
-              title: 'Research',
-              description: 'On-ground reporting, government documents, contractor records, stakeholder interviews. Every data point verified and sourced.'
+              title: 'Shape Understanding',
+              description: 'Become the most trusted source for accurate, nuanced, and accessible insight on Africa&apos;s infrastructure transformation.'
             }, {
               number: '2', 
-              title: 'Map the networks',
-              description: 'Track financing, identify stakeholders, document relationships. Understand not just *what* is being built, but *who* is building it and *how*.'
+              title: 'Inspire Accountability',
+              description: 'Empower citizens, media, and policymakers with the clarity they need to track promises, follow the money, and demand progress.'
             }, {
               number: '3',
-              title: 'Keep it current',
-              description: 'Infrastructure projects evolve. We update progress, timelines, costs, and milestones as they happen.'
+              title: 'Build Connection',
+              description: 'Create a shared space where builders, thinkers, and communities can engage meaningfully around the future being constructed across the continent.'
             }].map((step, index) => (
               <React.Fragment key={index}>
                 <AnimatedSection delay={index * 200} className="flex-1">
@@ -223,7 +235,7 @@ export default function Home() {
                     <div className="hidden lg:flex items-center">
                       <Image 
                         src="/arrow%20right.svg" 
-                        alt="Process flow arrow pointing to next step in BridgeAfrica's 72-hour talent placement process" 
+                        alt="Process flow arrow pointing to next step in BridgeAfrica&apos;s aspiration framework" 
                         width={80}
                         height={48}
                         className="w-[5em] h-[3em] animate-pulse"
@@ -238,7 +250,7 @@ export default function Home() {
                     <div className="lg:hidden flex justify-center py-4">
                       <Image 
                         src="/arrow%20right.svg" 
-                        alt="Process flow arrow pointing to next step in BridgeAfrica's 72-hour talent placement process" 
+                        alt="Process flow arrow pointing to next step in BridgeAfrica&apos;s aspiration framework" 
                         width={32}
                         height={32}
                         className="w-8 h-8 rotate-90"
