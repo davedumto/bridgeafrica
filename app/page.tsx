@@ -113,13 +113,13 @@ export default function Home() {
         <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             <AnimatedSection delay={0} className="flex">
-              <Card icon={<DatabaseIcon size={32} color="#0A2342" />} title="Tell Stories" description="We capture the full story of African projects—where the idea came from, who is involved, what's at stake, and how things change over time. Headlines but also the narrative that makes a project understandable and unforgettable." delay={0} />
+              <Card icon={<DatabaseIcon size={32} color="#0A2342" />} title="Tell Stories" description="We capture the full story of African projects, where the idea came from, who is involved, what's at stake, and how things change over time. Not just headlines but also the narrative that makes a project understandable and unforgettable." delay={0} />
             </AnimatedSection>
             <AnimatedSection delay={100} className="flex">
-              <Card icon={<NetworkIcon size={32} color="#0A2342" />} title="Show Reality" description="We document projects as they really are: the design, conceptualization, financing, timelines, delays, breakthroughs, and tradeoffs. Beyond timelines and press releases, we show how infrastructure actually gets built (or stuck)." delay={100} />
+              <Card icon={<NetworkIcon size={32} color="#0A2342" />} title="Show Reality" description="We document projects as they really are: the design, conceptualization, financing, timelines, delays, breakthroughs, and tradeoffs. Beyond slogans and press releases, we show how infrastructure actually gets built (or stuck)." delay={100} />
             </AnimatedSection>
             <AnimatedSection delay={200} className="flex">
-              <Card icon={<MapIcon size={32} color="#0A2342" />} title="Move Futures" description="We use these stories to shift what happens next. By making projects visible and clear, we inspire builders, inform decisions, and accelerate capital—so the next wave of African infrastructure can move faster and further." delay={200} />
+              <Card icon={<MapIcon size={32} color="#0A2342" />} title="Move Futures" description="We use these stories to shift what happens next. By making projects visibile and clear, we inspire new builders, better decisions, and smarter capital so the next wave of African infrastructure can move faster and further." delay={200} />
             </AnimatedSection>
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function Home() {
             {[{
               number: '1',
               title: 'Shape Understanding',
-              description: 'Become the most trusted source for accurate, nuanced, and accessible insight on Africa&apos;s infrastructure transformation.'
+              description: 'Become the most trusted source for accurate, nuanced, and accessible insight on Africa`s infrastructure transformation.'
             }, {
               number: '2', 
               title: 'Inspire Accountability',
