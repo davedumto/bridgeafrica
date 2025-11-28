@@ -7,7 +7,7 @@ import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { SectionDivider } from '@/components/SectionDivider';
 import { Footer } from '@/components/Footer';
-import { YouTubeEmbed } from '@/components/YouTubeEmbed';
+import { VideoCarousel } from '@/components/VideoCarousel';
 import { ProjectSlideshow } from '@/components/ProjectSlideshow';
 import { DatabaseIcon, MapIcon, NetworkIcon } from 'lucide-react';
 
@@ -52,7 +52,7 @@ export default function Home() {
                     BridgeAfrica is where that story is told.
                   </span>
                 </p>
-                <Button>Watch Project Stories</Button>
+                <Button onClick={() => window.open('https://www.youtube.com/@bridgeafrica-q4h', '_blank')}>Watch Project Stories</Button>
               </AnimatedSection>
             </div>
             
@@ -98,11 +98,7 @@ export default function Home() {
                 Watch how we document and analyze the projects that are reshaping the continent.
               </p>
             </div>
-            <YouTubeEmbed 
-              videoId="ODNXdRY84Ug"
-              title="BridgeAfrica: Documenting Africa's Infrastructure Journey"
-              className="max-w-4xl mx-auto"
-            />
+            <VideoCarousel />
           </AnimatedSection>
         </div>
       </section>
@@ -202,7 +198,7 @@ export default function Home() {
             {[{
               number: '1',
               title: 'Shape Understanding',
-              description: 'Become the most trusted source for accurate, nuanced, and accessible insight on Africa`s infrastructure transformation.'
+              description: 'Become the most trusted source for accurate, nuanced, and accessible insight on Africa`o you abouts infrastructure transformation.'
             }, {
               number: '2', 
               title: 'Inspire Accountability',
@@ -281,7 +277,7 @@ export default function Home() {
               Explore the projects reshaping Africa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-              <Button>Watch Project Stories</Button>
+              <Button onClick={() => window.open('https://www.youtube.com/@bridgeafrica-q4h', '_blank')}>Watch Project Stories</Button>
               <Button variant="secondary" className='border-1 border border-[#D0321D]'>Contact Us</Button>
             </div>
           </AnimatedSection>

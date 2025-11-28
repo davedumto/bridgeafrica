@@ -164,11 +164,6 @@ export function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <a href="#" className="text-sm md:text-base transition-colors hover:underline text-[#0A2342] dark:text-gray-300">
-                  Privacy Policy
-                </a>
-              </li>
             </ul>
           </div>
           {/* Contact Column */}
@@ -179,8 +174,8 @@ export function Footer() {
             <ul className="space-y-1 md:space-y-3">
               <li className="flex items-start gap-2">
                 <MailIcon size={20} className="mt-1 flex-shrink-0 text-[#0A2342] dark:text-white transition-colors" />
-                <a href="mailto:hello@bridgeafrica.com" className="text-sm md:text-base transition-colors hover:underline break-all text-[#0A2342] dark:text-gray-300">
-                  hello@bridgeafrica.com
+                <a href="mailto:admin@bridgeafricahq.com" className="text-sm md:text-base transition-colors hover:underline break-all text-[#0A2342] dark:text-gray-300">
+                  admin@bridgeafricahq.com
                 </a>
               </li>
               <li className="text-sm md:text-base text-[#0A2342] dark:text-gray-300 transition-colors">

@@ -15,10 +15,53 @@ export default function Contact() {
     message: ''
   });
   const [scrollY, setScrollY] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: data.message
+        });
+        // Clear form on success
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.message
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Something went wrong. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   // Handle scroll for geometric shapes animation
@@ -30,92 +73,8 @@ export default function Contact() {
   
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="min-h-[50vh] flex items-center justify-center pt-20 md:pt-24 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px] py-16 md:py-24 lg:py-[120px] text-center">
-          <AnimatedSection>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-[#0A2342] dark:text-white transition-colors">
-              Get Started
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto text-[#0A2342] dark:text-gray-300 transition-colors" style={{
-              lineHeight: '1.7'
-            }}>
-              Choose how you would like to engage with our infrastructure intelligence platform
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-      <SectionDivider color="#f9fafb" />
-      {/* Three Options Section */}
-      <section className="py-16 md:py-24 lg:py-[120px] bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
-        <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-            <AnimatedSection delay={0}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6" style={{
-                  backgroundColor: '#F6BE00'
-                }}>
-                  <CalendarIcon size={32} color="#0A2342" className="md:w-10 md:h-10" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
-                  color: '#0A2342'
-                }}>
-                  Schedule a Call
-                </h3>
-                <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
-                  lineHeight: '1.7'
-                }}>
-                  Book a call to discuss your infrastructure intelligence needs and explore how our platform can serve you.
-                </p>
-                <Button onClick={() => window.open('https://calendly.com/bridgeafrica98/30min', '_blank')}>Schedule Call</Button>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={100}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6" style={{
-                  backgroundColor: '#F6BE00'
-                }}>
-                  <FileTextIcon size={32} color="#0A2342" className="md:w-10 md:h-10" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
-                  color: '#0A2342'
-                }}>
-                  Watch Project Stories
-                </h3>
-                <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
-                  lineHeight: '1.7'
-                }}>
-                  Explore our YouTube channel featuring in-depth stories and analysis of major African infrastructure projects.
-                </p>
-                <Button onClick={() => window.open('https://www.youtube.com/@bridgeafrica', '_blank')}>Watch Stories</Button>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <div className="bg-white dark:bg-slate-700 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6" style={{
-                  backgroundColor: '#F6BE00'
-                }}>
-                  <ListIcon size={32} color="#0A2342" className="md:w-10 md:h-10" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{
-                  color: '#0A2342'
-                }}>
-                  Email Us
-                </h3>
-                <p className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-[#0A2342] dark:text-gray-300 transition-colors" style={{
-                  lineHeight: '1.7'
-                }}>
-                  Send us your questions, partnership inquiries, or feedback directly via email.
-                </p>
-                <Button onClick={() => window.location.href = 'mailto:hello@bridgeafrica.com'}>Email Us</Button>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-      <SectionDivider color="#ffffff" flip />
       {/* Contact Form Section */}
-      <section className="py-16 md:py-24 lg:py-[120px] bg-white dark:bg-slate-900 transition-colors duration-300">
+      <section className="pt-20 md:pt-24 pb-16 md:pb-24 lg:pb-[120px] bg-white dark:bg-slate-900 transition-colors duration-300">
         <div className="max-w-[1000px] xl:max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
           <AnimatedSection>
             <div className="bg-gray-50 dark:bg-slate-700 rounded-3xl p-8 md:p-12">
@@ -177,15 +136,27 @@ export default function Contact() {
                     required
                   />
                 </div>
+                {/* Status Messages */}
+                {submitStatus.type && (
+                  <div className={`p-4 rounded-xl ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-300'
+                      : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300'
+                  }`}>
+                    {submitStatus.message}
+                  </div>
+                )}
+
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="px-8 md:px-12 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg text-white transition-all duration-300 hover:scale-105"
+                    disabled={isSubmitting}
+                    className="px-8 md:px-12 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg text-white transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     style={{
                       backgroundColor: '#0A2342'
                     }}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                   <p className="mt-3 md:mt-4 text-sm md:text-base text-[#0A2342] dark:text-gray-300 transition-colors">
                     We respond within 24 hours

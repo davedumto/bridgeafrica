@@ -3,6 +3,13 @@ interface EmailTemplateProps {
   email: string;
 }
 
+interface ContactEmailTemplateProps {
+  name: string;
+  email: string;
+  message: string;
+  company?: string;
+}
+
 export function getWelcomeEmailHTML({ name, email }: EmailTemplateProps): string {
   return `
 <!DOCTYPE html>
@@ -244,5 +251,171 @@ Building bridges, Creating opportunities
 ---
 You're receiving this because you subscribed to our newsletter.
 Unsubscribe: {{unsubscribe_url}}
+  `.trim();
+}
+
+export function getContactEmailHTML({ name, email, message, company }: ContactEmailTemplateProps): string {
+  return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Form Message from ${name}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #0A2342;
+            background-color: #f8fafc;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fefefe;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+        .header {
+            background: linear-gradient(135deg, #0A2342 0%, #1e3a5f 100%);
+            padding: 30px;
+            text-align: center;
+        }
+        .header-text {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .content {
+            padding: 30px;
+        }
+        .message-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0A2342;
+            margin-bottom: 20px;
+        }
+        .field {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 15px;
+        }
+        .field:last-child {
+            border-bottom: none;
+        }
+        .field-label {
+            font-weight: bold;
+            color: #0A2342;
+            margin-bottom: 5px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .field-value {
+            color: #0A2342;
+            font-size: 16px;
+            word-wrap: break-word;
+        }
+        .message-content {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #D0312D;
+            white-space: pre-wrap;
+        }
+        .footer {
+            background-color: #0A2342;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-text {
+            color: #ffffff;
+            font-size: 14px;
+            margin: 0;
+        }
+        .reply-note {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .reply-note-text {
+            color: #92400e;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p class="header-text">New Contact Form Message</p>
+        </div>
+        
+        <div class="content">
+            <h1 class="message-title">Contact Form Submission</h1>
+            
+            <div class="field">
+                <div class="field-label">From</div>
+                <div class="field-value">${name}</div>
+            </div>
+            
+            <div class="field">
+                <div class="field-label">Email</div>
+                <div class="field-value"><a href="mailto:${email}" style="color: #D0312D; text-decoration: none;">${email}</a></div>
+            </div>
+            
+            ${company ? `
+            <div class="field">
+                <div class="field-label">Company</div>
+                <div class="field-value">${company}</div>
+            </div>
+            ` : ''}
+            
+            <div class="field">
+                <div class="field-label">Message</div>
+                <div class="field-value">
+                    <div class="message-content">${message}</div>
+                </div>
+            </div>
+            
+            <div class="reply-note">
+                <p class="reply-note-text">
+                    💡 You can reply directly to this email to respond to ${name}. The reply will be sent to ${email}.
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="footer-text">
+                BridgeAfrica Contact Form • ${new Date().toLocaleDateString()}
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+  `;
+}
+
+export function getContactEmailText({ name, email, message, company }: ContactEmailTemplateProps): string {
+  return `
+NEW CONTACT FORM MESSAGE
+
+From: ${name}
+Email: ${email}
+${company ? `Company: ${company}` : ''}
+
+MESSAGE:
+${message}
+
+---
+You can reply directly to this email to respond to ${name}.
+This message was sent via the BridgeAfrica contact form on ${new Date().toLocaleDateString()}.
   `.trim();
 }

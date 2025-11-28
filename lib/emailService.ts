@@ -1,15 +1,18 @@
 import * as nodemailer from 'nodemailer';
-import { getWelcomeEmailHTML, getWelcomeEmailText } from './emailTemplates';
+import { getWelcomeEmailHTML, getWelcomeEmailText, getContactEmailHTML, getContactEmailText } from './emailTemplates';
 
 // Email configuration
 const EMAIL_CONFIG = {
   host: process.env.SMTP_HOST || 'smtp.gmail.com',
   port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+  secure: false, // true for 465, false for other ports like 587
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASSWORD,
   },
+  tls: {
+    rejectUnauthorized: false
+  }
 };
 
 const FROM_EMAIL = process.env.FROM_EMAIL || 'hello@bridgeafrica.com';
@@ -47,6 +50,9 @@ export async function sendEmail({ to, subject, html, text, replyTo }: SendEmailO
   }
 
   try {
+    console.log('Attempting to send email to:', to);
+    console.log('From:', `${FROM_NAME} <${FROM_EMAIL}>`);
+    
     const mailOptions = {
       from: `${FROM_NAME} <${FROM_EMAIL}>`,
       to,
@@ -60,7 +66,7 @@ export async function sendEmail({ to, subject, html, text, replyTo }: SendEmailO
     console.log('Email sent successfully:', result.messageId);
     return true;
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Detailed email error:', error);
     return false;
   }
 }
@@ -80,6 +86,28 @@ export async function sendWelcomeEmail({ email, name }: WelcomeEmailOptions): Pr
     subject,
     html,
     text,
+  });
+}
+
+interface ContactEmailOptions {
+  name: string;
+  email: string;
+  message: string;
+  company?: string;
+}
+
+export async function sendContactEmail({ name, email, message, company }: ContactEmailOptions): Promise<boolean> {
+  const adminEmail = process.env.ADMIN_EMAIL || 'admin@bridgeafricahq.com';
+  const subject = `New Contact Form Message from ${name}`;
+  const html = getContactEmailHTML({ name, email, message, company });
+  const text = getContactEmailText({ name, email, message, company });
+
+  return await sendEmail({
+    to: adminEmail,
+    subject,
+    html,
+    text,
+    replyTo: email, // Set reply-to as the sender's email
   });
 }
 
