@@ -1,68 +1,13 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatedSection } from '@/components/AnimatedSection';
-import { Button } from '@/components/Button';
-import { SectionDivider } from '@/components/SectionDivider';
 import { Footer } from '@/components/Footer';
-import { CalendarIcon, FileTextIcon, ListIcon } from 'lucide-react';
+import { MailIcon, MapPinIcon, ArrowRightIcon } from 'lucide-react';
 
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
   const [scrollY, setScrollY] = useState(0);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: 'success' | 'error' | null;
-    message: string;
-  }>({ type: null, message: '' });
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setSubmitStatus({
-          type: 'success',
-          message: data.message
-        });
-        // Clear form on success
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        });
-      } else {
-        setSubmitStatus({
-          type: 'error',
-          message: data.message
-        });
-      }
-    } catch (error) {
-      setSubmitStatus({
-        type: 'error',
-        message: 'Something went wrong. Please try again later.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
   
   // Handle scroll for geometric shapes animation
   useEffect(() => {
@@ -70,99 +15,95 @@ export default function Contact() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:admin@bridgeafricahq.com?subject=Inquiry about BridgeAfrica&body=Hello BridgeAfrica team,%0D%0A%0D%0AI would like to learn more about your infrastructure intelligence platform.%0D%0A%0D%0ABest regards,';
+  };
   
   return (
     <div className="w-full">
-      {/* Contact Form Section */}
+      {/* Main Contact Section */}
       <section className="pt-20 md:pt-24 pb-16 md:pb-24 lg:pb-[120px] bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div className="max-w-[1000px] xl:max-w-[1200px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
+        <div className="max-w-[800px] mx-auto px-6 md:px-12 lg:px-[80px] xl:px-[120px]">
           <AnimatedSection>
-            <div className="bg-gray-50 dark:bg-slate-700 rounded-3xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center text-[#0A2342] dark:text-white transition-colors">
-                Send Us a Message
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-[#0A2342] dark:text-white transition-colors">
+                Get in Touch
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-                <div>
-                  <label className="block text-lg md:text-xl font-semibold mb-2 text-[#0A2342] dark:text-white transition-colors">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.name}
-                    onChange={e => setFormData({
-                      ...formData,
-                      name: e.target.value
-                    })}
-                    className="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 dark:bg-slate-600 dark:text-white focus:border-opacity-50 outline-none transition-all text-base md:text-lg"
-                    style={{
-                      borderColor: '#0A2342'
-                    }}
-                    required
-                  />
+              <p className="text-lg md:text-xl text-[#0A2342] dark:text-gray-300 transition-colors max-w-2xl mx-auto mb-8" style={{
+                lineHeight: '1.7'
+              }}>
+                Ready to learn more about African infrastructure? We'd love to hear from you.
+              </p>
+            </div>
+            
+            {/* Main Email CTA */}
+            <div className="bg-gray-50 dark:bg-slate-700 rounded-3xl p-8 md:p-12 text-center mb-12">
+              <div className="w-20 h-20 bg-[#D0312D] rounded-full flex items-center justify-center mx-auto mb-6">
+                <MailIcon size={40} className="text-white" />
+              </div>
+              
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#0A2342] dark:text-white transition-colors">
+                Send Us an Email
+              </h3>
+              
+              <p className="text-base md:text-lg text-[#0A2342] dark:text-gray-300 transition-colors mb-8 max-w-md mx-auto" style={{
+                lineHeight: '1.6'
+              }}>
+                Click the button below to open your email client and send us a message directly.
+              </p>
+              
+              <button
+                onClick={handleEmailClick}
+                className="inline-flex items-center gap-3 px-8 md:px-12 py-4 md:py-5 rounded-full font-semibold text-lg md:text-xl text-white transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 group"
+                style={{
+                  backgroundColor: '#D0312D'
+                }}
+              >
+                <span>Email BridgeAfrica</span>
+                <ArrowRightIcon size={24} className="group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
+              
+              <p className="mt-4 text-sm md:text-base text-[#0A2342] dark:text-gray-400 transition-colors">
+                admin@bridgeafricahq.com
+              </p>
+            </div>
+            
+            {/* Additional Contact Info */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* Location */}
+              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-gray-100 dark:border-slate-600 text-center transition-colors">
+                <div className="w-12 h-12 bg-[#F6BE00] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPinIcon size={24} className="text-[#0A2342]" />
                 </div>
-                <div>
-                  <label className="block text-lg md:text-xl font-semibold mb-2 text-[#0A2342] dark:text-white transition-colors">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={e => setFormData({
-                      ...formData,
-                      email: e.target.value
-                    })}
-                    className="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 dark:bg-slate-600 dark:text-white focus:border-opacity-50 outline-none transition-all text-base md:text-lg"
-                    style={{
-                      borderColor: '#0A2342'
-                    }}
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-lg md:text-xl font-semibold mb-2 text-[#0A2342] dark:text-white transition-colors">
-                    Message
-                  </label>
-                  <textarea
-                    value={formData.message}
-                    onChange={e => setFormData({
-                      ...formData,
-                      message: e.target.value
-                    })}
-                    rows={6}
-                    className="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 dark:bg-slate-600 dark:text-white focus:border-opacity-50 outline-none transition-all resize-none text-base md:text-lg"
-                    style={{
-                      borderColor: '#0A2342'
-                    }}
-                    required
-                  />
-                </div>
-                {/* Status Messages */}
-                {submitStatus.type && (
-                  <div className={`p-4 rounded-xl ${
-                    submitStatus.type === 'success' 
-                      ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-300'
-                      : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300'
-                  }`}>
-                    {submitStatus.message}
-                  </div>
-                )}
+                <h4 className="text-lg font-bold mb-2 text-[#0A2342] dark:text-white transition-colors">
+                  Our Location
+                </h4>
+                <p className="text-[#0A2342] dark:text-gray-300 transition-colors">
+                  San Francisco, CA<br />
+                  United States
+                </p>
+              </div>
 
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="px-8 md:px-12 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg text-white transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                    style={{
-                      backgroundColor: '#0A2342'
-                    }}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
-                  <p className="mt-3 md:mt-4 text-sm md:text-base text-[#0A2342] dark:text-gray-300 transition-colors">
-                    We respond within 24 hours
-                  </p>
+              {/* Social */}
+              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-gray-100 dark:border-slate-600 text-center transition-colors">
+                <div className="w-12 h-12 bg-[#0A2342] dark:bg-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5v-7l6.2 3.5-6.2 3.5z"/>
+                  </svg>
                 </div>
-              </form>
+                <h4 className="text-lg font-bold mb-2 text-[#0A2342] dark:text-white transition-colors">
+                  Follow Us
+                </h4>
+                <a 
+                  href="https://www.youtube.com/@bridgeafrica-q4h"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0A2342] dark:text-gray-300 hover:text-[#D0312D] dark:hover:text-yellow-400 transition-colors font-medium"
+                >
+                  @bridgeafrica
+                </a>
+              </div>
             </div>
           </AnimatedSection>
         </div>
