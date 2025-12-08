@@ -33,7 +33,7 @@ export default function Contact() {
               <p className="text-lg md:text-xl text-[#0A2342] dark:text-gray-300 transition-colors max-w-2xl mx-auto mb-8" style={{
                 lineHeight: '1.7'
               }}>
-                Ready to learn more about African infrastructure? We'd love to hear from you.
+                Ready to learn more about African infrastructure? We&apos;d love to hear from you.
               </p>
             </div>
             
