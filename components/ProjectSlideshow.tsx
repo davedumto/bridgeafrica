@@ -17,43 +17,36 @@ const projects: Project[] = [
     id: 1,
     name: "Grand Ethiopian Renaissance Dam",
     location: "Ethiopia",
-    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    imageUrl: "/Grand Ethiopian Renaissance Dam.jpeg",
     description: "Africa's largest hydroelectric dam project"
   },
   {
     id: 2,
     name: "Standard Gauge Railway",
     location: "Kenya",
-    imageUrl: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop",
+    imageUrl: "/Kenya Standard Gauge Railway.jpeg",
     description: "Modern railway connecting Nairobi to Mombasa"
   },
   {
     id: 3,
     name: "Lekki Port",
     location: "Nigeria",
-    imageUrl: "https://images.unsplash.com/photo-1605902711834-8b11c3e3ef2f?w=800&h=600&fit=crop",
+    imageUrl: "/Lekki Port.jpeg",
     description: "Deep seaport transforming West African trade"
   },
   {
     id: 4,
     name: "Dangote Refinery",
     location: "Nigeria", 
-    imageUrl: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=600&fit=crop",
+    imageUrl: "/Dangote refinery.jpeg",
     description: "World's largest single-train petroleum refinery"
   },
   {
     id: 5,
     name: "Mohammed VI Tangier Tech City",
     location: "Morocco",
-    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+    imageUrl: "/Mohammed VI Tangier City.jpeg",
     description: "Major technology and innovation hub"
-  },
-  {
-    id: 6,
-    name: "AFRICOM Fiber Network",
-    location: "Pan-Africa",
-    imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-    description: "Undersea fiber optic connectivity"
   }
 ];
 
